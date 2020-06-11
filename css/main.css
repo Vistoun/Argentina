@@ -11,15 +11,15 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 150%;
-    height: 150%; 
-    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: 0;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-
   }
   
   header .container {
@@ -55,9 +55,4 @@ h3 {
 }
 .nav-link:hover{
     color: gray !important;
-}
-#svg32{
-  display: block;
-  margin: auto;
-
 }

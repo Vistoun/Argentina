@@ -1,3 +1,9 @@
+/*
+
+-------TO DO------
+    - dát info vedle mapy
+*/
+
 let hory = [
     {
         "id": "aconcagua",
@@ -556,6 +562,7 @@ $(function () {
     let clicked = "";
     let clickedColor0 = "";
     let clickedColor1 = "";
+    
     //switche
     $("#mesta").hide();
     $("#parky").hide();
@@ -608,7 +615,7 @@ $(function () {
         let id = $(this).attr("id");
         let hora = hory.find(item => {return item.id == id});
         console.log(hora)
-        $("#info").fadeOut("fast", function() {$('#info').html(`<div class="col-12"> <h2 class="bg-success">${hora.Hora} - <small class="text-small">${hora.vyska}</small></h2> </div> <div class="col-xs-12 col-md-6"> <img class="img-fluid" src="photos/mapa/hory/${hora.img}"> </div> <div class="col-md-6"> <p style="text-align: justify"> ${hora.text} </p> <ul > <li>Popis: <b>${hora.popis}</b></li> <li>Pohori: <b>${hora.pohori}</b></li> <li>Provincie: <b>${hora.provincie}</b></li> <li>Prvovystup: <b>${hora.prvovystup}</b></li> </ul> </div>`)});
+        $("#info").fadeOut("fast", function() {$('#info').html(`<div class="col-12"> <h2 class="bg-success">${hora.Hora} - <small class="text-small" style="text-transform: lowercase">${hora.vyska}</small></h2> </div> <div class="col-xs-12 col-md-6"> <img class="img-fluid" src="photos/mapa/hory/${hora.img}"> </div> <div class="col-md-6"> <p style="text-align: justify"> ${hora.text} </p> <ul > <li>Popis: <b>${hora.popis}</b></li> <li>Pohori: <b>${hora.pohori}</b></li> <li>Provincie: <b>${hora.provincie}</b></li> <li>Prvovystup: <b>${hora.prvovystup}</b></li> </ul> </div>`)});
         $('#info').fadeIn("fast");
     });
     $('.hora').hover(function () {
